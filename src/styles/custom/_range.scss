@@ -1,0 +1,118 @@
+// ======================= RANGE SLIDER =========================== //
+.irs {
+    font-family: 'Roboto', sans-serif;
+
+    &--flat {
+        width: 100%;
+
+        .irs {
+
+            &-min,
+            &-max {
+                display: none;
+            }
+
+            &-line {
+                height: 1rem;
+                background-color: #eee;
+                border-radius: 3rem;
+            }
+
+            &-bar {
+                height: 1rem;
+                background-color: $accent;
+            }
+
+            &-handle {
+                width: 1.5rem;
+                height: 3.8rem;
+                background: #fff;
+                box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.15);
+                border-radius: 0.3rem;
+                cursor: pointer;
+
+                i:first-child {
+                    display: none;
+                }
+
+                &:hover {
+                    i:first-child {
+                        background-color: transparent;
+                    }
+                }
+
+                &.state_hover>i:first-child {
+                    background-color: transparent;
+                }
+            }
+
+            &-from,
+            &-to,
+            &-single {
+                display: none;
+            }
+        }
+    }
+}
+
+.calculator-form__sum-range {
+    .irs--flat {
+        height: 5.4rem;
+
+        .irs {
+
+            &-line,
+            &-bar {
+                top: 2.2rem;
+            }
+
+            &-handle {
+                top: 0.8rem;
+            }
+        }
+    }
+}
+
+.calculator-form__term-range {
+    .irs--flat {
+        height: 6.8rem;
+
+        .irs {
+
+            &-line,
+            &-bar {
+                top: 1.4rem;
+            }
+
+            &-handle {
+                top: 0;
+            }
+
+            &-grid {
+                height: 2.1rem;
+            }
+
+            &-grid-text {
+                padding: 0;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                color: #eee;
+
+                @media(max-width: 1200px) {
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                }
+
+                @media(max-width: 480px) {
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                }
+            }
+
+            &-grid-pol {
+                display: none;
+            }
+        }
+    }
+}

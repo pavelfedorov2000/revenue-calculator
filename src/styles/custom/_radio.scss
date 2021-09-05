@@ -1,0 +1,28 @@
+// ===================== RADIO ===================== //
+.radio-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.radio-style {
+    position: absolute;
+    @extend %pos-center-x;
+    bottom: 0;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: transparent;
+    border-radius: 0.3rem;
+}
+
+.radio-box:checked {
+    +.radio-style {
+        background-color: $accent;
+    }
+
+    +* {
+        color: $accent;
+    }
+}

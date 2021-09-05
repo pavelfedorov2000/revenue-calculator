@@ -1,0 +1,215 @@
+.calculator-form {
+    @extend %flex-row-end;
+
+    @media (max-width: 959px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__row {
+        display: flex;
+
+        &--sb {
+            justify-content: space-between;
+
+            @media(max-width: 479px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // .calculator-form__input
+
+    &__input {
+        width: 70rem;
+        display: grid;
+        grid-row-gap: 4rem;
+
+        @media(max-width: 1200px) {
+            width: 60rem;
+        }
+
+        @media(max-width: 959px) {
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+    }
+
+    // .calculator-form__label
+
+    &__label {
+        display: block;
+        margin-bottom: 1rem;
+        color: $gray-text;
+    }
+
+    &__first-range {
+        align-items: flex-end;
+    }
+
+    &__second-range {
+        @media (max-width: 639px) {
+            flex-direction: column;
+        }
+    }
+
+    &__range-label {
+        display: block;
+        color: $gray-text;
+        margin-bottom: 1.8rem;
+    }
+
+    // .calculator-form__currency-label
+
+    &__currency-label {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        color: $black;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    &__currency-label+&__currency-label {
+        margin-left: 2rem;
+    }
+
+    // .calculator-form__range-input
+
+    &__range-input {
+        width: 100%;
+    }
+
+    &__sum-range {
+        @media (max-width: 639px) {
+            width: 24rem;
+        }
+
+        @media(max-width: 479px) {
+            width: 100%;
+        }
+    }
+
+    &__term-range {
+        @media (max-width: 639px) {
+            width: 100%;
+        }
+    }
+
+    // .calculator-form__range
+
+    &__range {
+        width: 46rem;
+
+        @media (max-width: 1200px) {
+            width: 36rem;
+        }
+    }
+
+    &__range-output {
+        width: 20rem;
+        padding: 1.5rem 2rem;
+        @extend %field;
+        @extend %flex-row-center;
+
+        input {
+            max-width: 9.2rem;
+        }
+
+        span {
+            color: $gray-text;
+        }
+
+        @media (max-width: 639px) {
+            width: 16rem;
+        }
+
+        @media (max-width: 479px) {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    // .calculator-form__percent
+
+    &__percent {
+        width: 20rem;
+
+        @media(max-width: 639px) {
+            width: 100%;
+            margin-top: 4rem;
+            text-align: center;
+        }
+    }
+
+    &__dates {
+        width: 56rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+
+        @media(max-width: 1200px) {
+            width: 100%;
+        }
+
+        @media(max-width: 639px) {
+            width: 28rem;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__date-item input {
+        width: 100%;
+        height: 5.4rem;
+        padding-left: 2rem;
+        @extend %field;
+        background-image: url(../img/calendar.svg);
+        background-size: 16px 16px;
+        background-position: calc(100% - 2rem) center;
+        background-repeat: no-repeat;
+    }
+}
+
+.interest-rate {
+    background-color: $gray-bg;
+    border-radius: 1.5rem;
+    padding: 2.2rem 2rem;
+
+    // .interest-rate__title
+
+    &__title {
+        color: $gray-text;
+        margin-bottom: 1.2rem;
+    }
+
+    // .interest-rate__value
+
+    &__value {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 700;
+        color: $gray-text;
+
+        span {
+            color: $black;
+        }
+    }
+
+    &__value-percent {
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
+}
+
+.investment-currency {
+    color: $gray-text;
+}
+
+#investment-start {
+    color: $black;
+}
+
+#investment-end {
+    color: $gray-text;
+}

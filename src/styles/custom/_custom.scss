@@ -1,0 +1,12 @@
+@import './radio';
+@import './range';
+
+@keyframes animateChart {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 9.58vh;
+    }
+}
